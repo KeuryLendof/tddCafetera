@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Inventario</title>
 </head>
-<body>
+<body onload="cargar()">
 
     <h1 class="title">Inventario de la cafetera</h1>
     
@@ -15,14 +15,21 @@
         <div class="card">
             <img src="img/bolsa-de-cafe.png">
             <h4>Cafe</h4>
-            <button id='disminuir'>-</button>
-            <p id="counter">{{contador}}</p>
-            <button id='aumentar'>+</button>
+            <section>
+                <button id='disminuirCafe'>-</button>
+                <p id="cantidadCafe"></p>
+                <button id='aumentarCafe'>+</button>
+            </section>
         </div>
         
         <div class="card">
             <img src="img/cubos-de-azucar (1).png">
             <h4>Azucar</h4>
+            <section>
+                <button id='disminuirAzucar'>-</button>
+                <p id="cantidadAzucar"></p>
+                <button id='aumentarAzucar'>+</button>
+            </section>
         </div>
 
         <div class="card">
