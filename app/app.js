@@ -39,6 +39,11 @@ function cargar(){
     document.getElementById('cantidadVasoP').innerHTML = vasoPequeno;
     document.getElementById('cantidadVasoM').innerHTML = vasoMediano;
     document.getElementById('cantidadVasoG').innerHTML = vasoGrande;
+    // if(cafe == 8){
+    //     console.log("Todo funciona bien")
+    // }else{
+    //     console.log("perfecto")
+    // }
 }
 
 aumentarCafeBtn.addEventListener("click",()=>{
