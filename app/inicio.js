@@ -1,4 +1,5 @@
-let login = document.getElementById("login");
+let login = document.getElementById("login"),
+    orden = document.getElementById("terminarOrden");
 
 
 login.addEventListener("click",()=>{
@@ -7,13 +8,15 @@ login.addEventListener("click",()=>{
 
     if(usuario == "prueba"){
         if(contrasena == 12345){
-            console.log("login correcto")
+            window.location.href="./inventario.html";
         }else{
-            console.log("contrasena incorrecta")
+            swal ( "Oops" ,  "La contrasena es: 12345!" ,  "error" )
         }
     }else{
-        console.log("incorrecto")
-        console.log(usuario)
-        console.log(contrasena)
+        swal ( "Oops" ,  "El usuario es: prueba!" ,  "error" )
     }
+})
+
+orden.addEventListener("click",()=>{
+    swal("Orden exitosa!", "", "success")
 })
