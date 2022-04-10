@@ -24,22 +24,36 @@
       </div>
     </nav>
 
-    <div class="card mb-3 container inicio" style="max-width: 640px;">
-      <div class="row g-0">
+    <div class="card mb-3 container inicio" style="max-width: 840px;">
+      <div class="row">
         <div class="col-md-4">
           <img src="/img/quitar.png" class="img-fluid rounded-start" alt="...">
         </div>
-        <div class="col-md-8">
+        <div class="col-md-4">
           <div class="card-body">
             <h5 class="card-title">Ordena tu cafe</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            <section class="pedidos">
+              <i>3 Oz</i>
+              <i>5 Oz</i>
+              <i>7 Oz</i>
+            </section>
+            <h5 class="card-title">Cantidad de azucar:</h5>
+            <section class="pedidos pedidoA">
+              <i><img src="/img/cubos-de-azucar (2).png" alt="">1</i>
+              <i><img src="/img/cubos-de-azucar (2).png" alt="">2</i>
+            </section>
+            <br>
+            <button type="button" class="btn btn-secondary btn-sm">Terminar Orden</button>
           </div>
+        </div>
+        <div class="col-md-4">
+          <h5 class="card-title">Probando</h5>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+          <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
         </div>
       </div>
     </div>
-
 
 
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -50,11 +64,20 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            ...
+            <form>
+              <div class="input-group flex-nowrap">
+                <span class="input-group-text" id="addon-wrapping">@</span>
+                <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="addon-wrapping">
+              </div>
+              <br>
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password" id="exampleInputPassword1">
+              </div>
+            </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary">Save changes</button>
+            <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+            <button type="button" class="btn btn-primary">Iniciar Sesion</button>
           </div>
         </div>
       </div>
