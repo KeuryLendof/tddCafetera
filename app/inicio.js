@@ -1,5 +1,15 @@
 let login = document.getElementById("login"),
-    orden = document.getElementById("terminarOrden");
+    orden = document.getElementById("terminarOrden"),
+
+    pedirCafePequeno = document.getElementById("pedirCafePequeno"),
+    pedirCafeMediano = document.getElementById("pedirCafeMediano"),
+    pedirCafeGrande = document.getElementById("pedirCafeGrande"),
+
+    cafe = localStorage.getItem("cafe"),
+    azucar = localStorage.getItem("azucar"),
+    vasoPequeno = localStorage.getItem("vasoPequeno"),
+    vasoMediano = localStorage.getItem("vasoMediano"),
+    vasoGrande = localStorage.getItem("vasoGrande");
 
 
 login.addEventListener("click",()=>{
@@ -19,4 +29,16 @@ login.addEventListener("click",()=>{
 
 orden.addEventListener("click",()=>{
     swal("Orden exitosa!", "", "success")
+})
+
+pedirCafePequeno.addEventListener('click',()=>{
+
+})
+
+pedirCafeMediano.addEventListener('click',()=>{
+    
+})
+
+pedirCafeGrande.addEventListener('click',()=>{
+    
 })
