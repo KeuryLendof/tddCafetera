@@ -10,7 +10,6 @@ body{
     width: 100%;
     font-family: sans-serif;
     font-family: 'Open Sans', sans-serif;
-    background-color: maroon;
 }
 
 .title{
@@ -123,3 +122,30 @@ body{
     color: #fff;
     background: #797780;
 }
+
+.wrapper{
+    margin: 0 auto;
+    height: 55px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #FFF;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+}
+.wrapper span{
+    width: 80%;
+    text-align: center;
+    font-size: 35px;
+    font-weight: 400;
+    cursor: pointer;
+    user-select: none;
+}
+.wrapper span.num{
+    font-size: 30px;
+    border-right: 2px solid rgba(0,0,0,0.2);
+    border-left: 2px solid rgba(0,0,0,0.2);
+    pointer-events: none;
+}
+  
