@@ -1,70 +1,97 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Inventario</title>
-</head>
-<body onload="cargar()">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <h1 class="title">Inventario de la cafetera</h1>
-    
-    <div class="container">
-        <div class="card">
-            <img src="img/bolsa-de-cafe.png">
-            <h4>Cafe</h4>
-            <br>
-            <div class="wrapper">
-                <span id='disminuirCafe' class="minus">-</span>
-                <span id="cantidadCafe" class="num"></span>
-                <span id='aumentarCafe' class="plus">+</span>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Inventario</title>
+  </head>
+  <body onload="cargar()">
+
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand">
+            <img src="/img/cafeteria.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+            Maquina De Cafe
+          </a>
+          <form class="d-flex" onclick="cerrarSesion()">
+            <a class="nav-link"><img src="/img/cerrar-sesion (1).png" alt=""></a>
+          </form>
+        </div>
+    </nav>
+
+    <div class="inventario container mt-5 mb-5">
+        <div class="row justify-content-md-center">
+            
+            <div class="card col-md-4 m-1" style="width: 18rem;">
+                <img src="/img/bolsa-de-cafe.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Cafe</h5>
+                    <div class="wrapper">
+                        <span id='disminuirCafe' class="minus">-</span>
+                        <span id="cantidadCafe" class="num"></span>
+                        <span id='aumentarCafe' class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-md-4 m-1" style="width: 18rem;">
+                <img src="/img/cubos-de-azucar (1).png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Azucar</h5>
+                    <div class="wrapper">
+                        <span id='disminuirAzucar' class="minus">-</span>
+                        <span id="cantidadAzucar" class="num"></span>
+                        <span id='aumentarAzucar' class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-md-4 m-1" style="width: 18rem;">
+                <img src="/img/vaso-de-papel.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vaso Pequeño 3 Oz</h5>
+                    <div class="wrapper">
+                        <span id='disminuirVasoP' class="minus">-</span>
+                        <span id="cantidadVasoP" class="num"></span>
+                        <span id='aumentarVasoP' class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-md-4 m-1" style="width: 18rem;">
+                <img src="/img/vaso-de-papel.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vaso Mediano 5 Oz</h5>
+                    <div class="wrapper">
+                        <span id='disminuirVasoM' class="minus">-</span>
+                        <span id="cantidadVasoM" class="num"></span>
+                        <span id='aumentarVasoM' class="plus">+</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card col-md-4 m-1" style="width: 18rem;">
+                <img src="/img/vaso-de-papel.png" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Vaso Grande 7 Oz</h5>
+                    <div class="wrapper">
+                        <span id='disminuirVasoG' class="minus">-</span>
+                        <span id="cantidadVasoG" class="num"></span>
+                        <span id='aumentarVasoG' class="plus">+</span>
+                    </div>
+                </div>
             </div>
         </div>
-        
-        <div class="card">
-            <img src="img/cubos-de-azucar (1).png">
-            <h4>Azucar</h4>
-            <section>
-                <button id='disminuirAzucar'>-</button>
-                <p id="cantidadAzucar"></p>
-                <button id='aumentarAzucar'>+</button>
-            </section>
-        </div>
-
-        <div class="card">
-            <img src="img/vaso-de-papel.png">
-            <h4>Vaso Pequeño 3 Oz</h4>
-            <section>
-                <button id='disminuirVasoP'>-</button>
-                <p id="cantidadVasoP"></p>
-                <button id='aumentarVasoP'>+</button>
-            </section>
-        </div>
-
-        <div class="card">
-            <img src="img/vaso-de-papel.png">
-            <h4>Vaso Mediano 5 Oz</h4>
-            <section>
-                <button id='disminuirVasoM'>-</button>
-                <p id="cantidadVasoM"></p>
-                <button id='aumentarVasoM'>+</button>
-            </section>
-        </div>
-
-        <div class="card">
-            <img src="img/vaso-de-papel.png">
-            <h4>Vaso Grande 7 Oz</h4>
-            <section>
-                <button id='disminuirVasoG'>-</button>
-                <p id="cantidadVasoG"></p>
-                <button id='aumentarVasoG'>+</button>
-            </section>
-        </div>
     </div>
+   
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="/app/app.js"></script>
-    
-</body>
+  </body>
 </html>

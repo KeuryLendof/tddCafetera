@@ -23,7 +23,6 @@ let aumentarCafeBtn = document.getElementById("aumentarCafe"),
     show = document.getElementById("abrirLogin");
 
 
-
 let cafe = localStorage.getItem("cafe");
 let azucar = localStorage.getItem("azucar");
 let vasoPequeno = localStorage.getItem("vasoPequeno");
@@ -108,6 +107,10 @@ disminuirVasoGBtn.addEventListener("click",()=>{
 
 show.addEventListener('click', () => dialog.showModal())
 cerrar.addEventListener('click', () => dialog.close())
+
+function cerrarSesion(){
+    window.location.href="./index.html";
+}
 
 
 // localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");
