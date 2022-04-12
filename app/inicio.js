@@ -15,6 +15,8 @@ let login = document.getElementById("login"),
     vasoGrande = localStorage.getItem("vasoGrande");
 
 
+
+
 login.addEventListener("click",()=>{
     let usuario = document.querySelector("#usuario").value;
     let contrasena = document.querySelector("#contrasena").value;
@@ -30,37 +32,9 @@ login.addEventListener("click",()=>{
     }
 })
 
-orden.addEventListener("click",()=>{
-    swal("Orden exitosa!", "", "success")
-
-    let data =[
-        {
-            'Cantidad de cafe': '3 Oz',
-            'Azucar': '1',
-            'fecha': '11/11/11'
-        },
-        {
-            'Cantidad de cafe': '7 Oz',
-            'Azucar': '2',
-            'fecha': '12/12/12'
-        }
-    ]
-
-    localStorage.setItem('datos', JSON.stringify(data));
-
-    let prueba = JSON.parse(localStorage.getItem("datos"));
-    console.log(prueba[1])
-    console.log(prueba[0].estilo)
-    data.push({
-        'Cantidad de cafe': '5 Oz',
-        'Azucar': '1',
-        'fecha': '9/9/9'
-    })
-    localStorage.setItem('datos', JSON.stringify(data));
-    console.log(prueba)
-})
 
 pedirCafePequeno.addEventListener('click',()=>{
+    historialCafe = '3 Oz'
     if(cafe>0){
         if(vasoPequeno>0){
             cafe -= 1
@@ -76,6 +50,7 @@ pedirCafePequeno.addEventListener('click',()=>{
 })
 
 pedirCafeMediano.addEventListener('click',()=>{
+    historialCafe = '5 Oz'
     if(cafe>0){
         if(vasoMediano>0){
             cafe -= 1
@@ -91,6 +66,7 @@ pedirCafeMediano.addEventListener('click',()=>{
 })
 
 pedirCafeGrande.addEventListener('click',()=>{
+    historialCafe = '7 Oz'
     if(cafe>0){
         if(vasoGrande>0){
             cafe -= 1
@@ -106,6 +82,7 @@ pedirCafeGrande.addEventListener('click',()=>{
 })
 
 unaAzucar.addEventListener('click',()=>{
+    historialAzucar = '1'
     if(azucar>0){
         azucar -= 1
         localStorage.setItem("azucar", azucar)
@@ -115,10 +92,44 @@ unaAzucar.addEventListener('click',()=>{
 })
 
 dosAzucar.addEventListener('click',()=>{
+    historialAzucar = '2'
     if(azucar>=2){
         azucar -= 2
         localStorage.setItem("azucar", azucar)
     }else{
         swal ( "Oops" ,  "No hay para dos cucharadas de azucar" ,  "error" )
     }
+})
+
+orden.addEventListener("click",()=>{
+    swal("Orden exitosa!", "", "success")
+    let historialCafe = '5 Oz';
+    let historialAzucar = '1';
+    let historialFecha = '11/04/22';
+
+    // let data =[
+    //     {
+    //         'Cantidad de cafe': '3 Oz',
+    //         'Azucar': '1',
+    //         'fecha': '11/11/11'
+    //     },
+    //     {
+    //         'Cantidad de cafe': '7 Oz',
+    //         'Azucar': '2',
+    //         'fecha': '12/12/12'
+    //     }
+    // ]
+
+    // localStorage.setItem('historial', JSON.stringify(data));
+
+    let prueba = JSON.parse(localStorage.getItem("datos"));
+    // console.log(prueba[1])
+    // console.log(prueba[0].estilo)
+    prueba.push({
+        'Cantidad de cafe': historialCafe,
+        'Azucar': historialAzucar,
+        'fecha': historialFecha
+    })
+    localStorage.setItem('historial', JSON.stringify(prueba));
+    //console.log(prueba)
 })
