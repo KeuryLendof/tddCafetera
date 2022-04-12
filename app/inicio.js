@@ -12,6 +12,8 @@ let login = document.getElementById("login"),
     cuatroAzucar = document.getElementById("pedirAzucar4"),
     cincoAzucar = document.getElementById("pedirAzucar5"),
 
+    cancelarOrden = document.getElementById('cancelarOrden'),
+
     cafe = localStorage.getItem("cafe"),
     azucar = localStorage.getItem("azucar"),
     vasoPequeno = localStorage.getItem("vasoPequeno"),
@@ -73,6 +75,7 @@ pedirCafePequeno.addEventListener('click',()=>{
 })
 
 pedirCafeMediano.addEventListener('click',()=>{
+    mostrarBotonCancelar();
     historialCafe = '5 Oz'
     if(cafe>0){
         if(vasoMediano>0){
@@ -89,6 +92,7 @@ pedirCafeMediano.addEventListener('click',()=>{
 })
 
 pedirCafeGrande.addEventListener('click',()=>{
+    mostrarBotonCancelar();
     historialCafe = '7 Oz'
     if(cafe>0){
         if(vasoGrande>0){
@@ -154,53 +158,64 @@ cincoAzucar.addEventListener('click',()=>{
     }
 })
 
-// orden.addEventListener("click",()=>{
+orden.addEventListener("click",()=>{
 
-//     
+    historialFecha = todayDate.toLocaleString();
 
-//     historialFecha = todayDate.toLocaleString();
+    addHistorial(historialCafe, historialAzucar, historialFecha);
 
-//     addHistorial(historialCafe, historialAzucar, historialFecha);
+    document.getElementById('cantidadCafeM').innerHTML = historialCafe;
+    document.getElementById('cantidadAzucarM').innerHTML = historialAzucar;
 
-//     // let historialCafe = '5 Oz';
-//     // let historialAzucar = '1';
-//     // let historialFecha = '11/04/22';
+    cancelarOrden.style.display = 'none';
 
-//     // let data =[
-//     //     {
-//     //         'Cafe': '7 Oz',
-//     //         'Azucar': '2',
-//     //         'Fecha': '12/4/2022, 0:00:07'
-//     //     },
-//     //     {
-//     //         "Cafe": "3 Oz",
-//     //         "Azucar": "1",
-//     //         "Fecha": "12/4/2022, 0:00:27"
-//     //     }
-//     // ]
+    // let historialCafe = '5 Oz';
+    // let historialAzucar = '1';
+    // let historialFecha = '11/04/22';
 
-//     // localStorage.setItem('historial', JSON.stringify(data));
+    // let data =[
+    //     {
+    //         'Cafe': '7 Oz',
+    //         'Azucar': '2',
+    //         'Fecha': '12/4/2022, 0:00:07'
+    //     },
+    //     {
+    //         "Cafe": "3 Oz",
+    //         "Azucar": "1",
+    //         "Fecha": "12/4/2022, 0:00:27"
+    //     }
+    // ]
 
-//     //let prueba = JSON.parse(localStorage.getItem("datos"));
-//     // console.log(prueba[1])
-//     // console.log(prueba[0].estilo)
-//     // prueba.push({
-//     //     'Cantidad de cafe': historialCafe,
-//     //     'Azucar': historialAzucar,
-//     //     'fecha': historialFecha
-//     // })
-//     // localStorage.setItem('historial', JSON.stringify(prueba));
-//     //console.log(prueba)
-// })
+    // localStorage.setItem('historial', JSON.stringify(data));
+
+    //let prueba = JSON.parse(localStorage.getItem("datos"));
+    // console.log(prueba[1])
+    // console.log(prueba[0].estilo)
+    // prueba.push({
+    //     'Cantidad de cafe': historialCafe,
+    //     'Azucar': historialAzucar,
+    //     'fecha': historialFecha
+    // })
+    // localStorage.setItem('historial', JSON.stringify(prueba));
+    //console.log(prueba)
+})
 
 // function localStorageHistorial(plist){
 //     localStorage.setItem('historial', JSON.stringify(plist));
 // }
 
+cancelarOrden.addEventListener('click',()=>{
+    swal("Orden Cancelada!", "", "success");
+    cancelarOrden.style.display = 'none';
+    cafe += 1
+    localStorage.setItem("cafe", cafe)
+    console.log(historialCafe)
+    console.log(historialAzucar)
+})
+
 function mostrarBotonCancelar(){
 
-    var x = document.getElementById('cancelarOrden');
-    x.style.display = 'block';
+    cancelarOrden.style.display = 'block';
 
     // if (x.style.display === 'none') {
     //     x.style.display = 'block';
