@@ -47,9 +47,31 @@ pedirCafePequeno.addEventListener('click',()=>{
 })
 
 pedirCafeMediano.addEventListener('click',()=>{
-    
+    if(cafe>0){
+        if(vasoMediano>0){
+            cafe -= 1
+            localStorage.setItem("cafe", cafe)
+            vasoMediano -= 1
+            localStorage.setItem("vasoMediano", vasoMediano)
+        }else{
+            swal ( "Oops" ,  "No hay vasos de cafe medianos!" ,  "error" )
+        }
+    }else{
+        swal ( "Oops" ,  "No hay cafe" ,  "error" )
+    }
 })
 
 pedirCafeGrande.addEventListener('click',()=>{
-    
+    if(cafe>0){
+        if(vasoGrande>0){
+            cafe -= 1
+            localStorage.setItem("cafe", cafe)
+            vasoGrande -= 1
+            localStorage.setItem("vasoGrande", vasoGrande)
+        }else{
+            swal ( "Oops" ,  "No hay vasos de cafe grandes!" ,  "error" )
+        }
+    }else{
+        swal ( "Oops" ,  "No hay cafe" ,  "error" )
+    }
 })
