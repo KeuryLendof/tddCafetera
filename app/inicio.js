@@ -31,7 +31,8 @@ function addHistorial(phistorialCafe, phistorialAzucar, phistorialFecha ){
         Fecha : phistorialFecha
     }
     historial.push(newHistorial);
-    localStorage.setItem('historial', JSON.stringify(historial));
+    localStorageHistorial(historial)
+    //localStorage.setItem('historial', JSON.stringify(historial));
 }
 
 login.addEventListener("click",()=>{
@@ -154,6 +155,6 @@ orden.addEventListener("click",()=>{
     //console.log(prueba)
 })
 
-// function localStorageHistorial(plist){
-//     localStorage.setItem('historial', JSON.stringify(plist));
-// }
+function localStorageHistorial(plist){
+    localStorage.setItem('historial', JSON.stringify(plist));
+}
