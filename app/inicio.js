@@ -14,6 +14,10 @@ let login = document.getElementById("login"),
     vasoMediano = localStorage.getItem("vasoMediano"),
     vasoGrande = localStorage.getItem("vasoGrande"),
 
+    historialCafe = '',
+    historialAzucar = '',
+    historialFecha = '11/04/22';
+
     historial = [];
 
 
@@ -115,10 +119,9 @@ dosAzucar.addEventListener('click',()=>{
 
 orden.addEventListener("click",()=>{
     swal("Orden exitosa!", "", "success")
-    let historialCafe = '7 Oz',
-        historialAzucar = '2',
-        historialFecha = '11/04/22';
+
     addHistorial(historialCafe, historialAzucar, historialFecha);
+
     // let historialCafe = '5 Oz';
     // let historialAzucar = '1';
     // let historialFecha = '11/04/22';
