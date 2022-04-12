@@ -40,8 +40,7 @@
 
 
 .inicio{
-    margin-top: 120px;
-    margin-bottom: 120px;
+    margin-top: 50px;
 }
 
 .pedidos{
@@ -74,8 +73,8 @@
     margin: 2px;
     margin-top: 2px;
     margin-bottom: 2px;
-    height: 47px;
-    width: 47px;
+    height: 40px;
+    width: 42px;
     display: flex;
     cursor: pointer;
     color: #797780;

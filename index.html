@@ -24,12 +24,12 @@
       </div>
     </nav>
 
-    <div class="card mb-3 container inicio" style="max-width: 840px;">
+    <div class="card container inicio" style="max-width: 320px;">
       <div class="row">
-        <div class="col-md-4">
+        <div class="col-md-9">
           <img src="/img/barista.png" class="img-fluid rounded-start" alt="...">
         </div>
-        <div class="col-md-4">
+        <div class="col-md-9">
           <div class="card-body">
             <h5 class="card-title">Ordena tu cafe</h5>
             <section class="pedidos">
@@ -46,16 +46,15 @@
               <i id="pedirAzucar5"><img src="/img/cubos-de-azucar (2).png" alt="">5</i>
             </section>
             <br>
-            <button type="button" id="terminarOrden" class="btn btn-secondary btn-sm">Recoger vaso</button>
+            <button type="button" id="terminarOrden" class="btn btn-secondary btn-sm" data-bs-toggle="modal" data-bs-target="#modalExitoDeCompra">
+              Recoger vaso
+            </button>
           </div>
-        </div>
-        <div class="col-md-4">
-          <a><img src="/img/quitar.png" alt="">-></a>
         </div>
       </div>
     </div>
 
-
+    <!-- Modal Login -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -78,6 +77,22 @@
           <div class="modal-footer">
             <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
             <button type="button" class="btn btn-primary" id="login">Iniciar Sesion</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Exito De Compra -->
+    <div class="modal fade" id="modalExitoDeCompra" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body" style="text-align: center;">
+            <h3 class="modal-title" id="staticBackdropLabel">Compra Exitosa</h3>
+            <br>
+            <img src="/img/marca-de-verificacion (1).png" alt="">
+            <br><br>
+            <h5 class="card-title">Cafe 7 Oz</h5>
+            <h5 class="card-title">3 cucharadas de azucar</h5>
           </div>
         </div>
       </div>

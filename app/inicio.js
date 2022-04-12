@@ -153,44 +153,44 @@ cincoAzucar.addEventListener('click',()=>{
     }
 })
 
-orden.addEventListener("click",()=>{
+// orden.addEventListener("click",()=>{
 
-    swal("Orden exitosa!", "", "success")
+//     swal("Orden exitosa!", "", "success")
 
-    historialFecha = todayDate.toLocaleString();
+//     historialFecha = todayDate.toLocaleString();
 
-    addHistorial(historialCafe, historialAzucar, historialFecha);
+//     addHistorial(historialCafe, historialAzucar, historialFecha);
 
-    // let historialCafe = '5 Oz';
-    // let historialAzucar = '1';
-    // let historialFecha = '11/04/22';
+//     // let historialCafe = '5 Oz';
+//     // let historialAzucar = '1';
+//     // let historialFecha = '11/04/22';
 
-    // let data =[
-    //     {
-    //         'Cafe': '7 Oz',
-    //         'Azucar': '2',
-    //         'Fecha': '12/4/2022, 0:00:07'
-    //     },
-    //     {
-    //         "Cafe": "3 Oz",
-    //         "Azucar": "1",
-    //         "Fecha": "12/4/2022, 0:00:27"
-    //     }
-    // ]
+//     // let data =[
+//     //     {
+//     //         'Cafe': '7 Oz',
+//     //         'Azucar': '2',
+//     //         'Fecha': '12/4/2022, 0:00:07'
+//     //     },
+//     //     {
+//     //         "Cafe": "3 Oz",
+//     //         "Azucar": "1",
+//     //         "Fecha": "12/4/2022, 0:00:27"
+//     //     }
+//     // ]
 
-    // localStorage.setItem('historial', JSON.stringify(data));
+//     // localStorage.setItem('historial', JSON.stringify(data));
 
-    //let prueba = JSON.parse(localStorage.getItem("datos"));
-    // console.log(prueba[1])
-    // console.log(prueba[0].estilo)
-    // prueba.push({
-    //     'Cantidad de cafe': historialCafe,
-    //     'Azucar': historialAzucar,
-    //     'fecha': historialFecha
-    // })
-    // localStorage.setItem('historial', JSON.stringify(prueba));
-    //console.log(prueba)
-})
+//     //let prueba = JSON.parse(localStorage.getItem("datos"));
+//     // console.log(prueba[1])
+//     // console.log(prueba[0].estilo)
+//     // prueba.push({
+//     //     'Cantidad de cafe': historialCafe,
+//     //     'Azucar': historialAzucar,
+//     //     'fecha': historialFecha
+//     // })
+//     // localStorage.setItem('historial', JSON.stringify(prueba));
+//     //console.log(prueba)
+// })
 
 // function localStorageHistorial(plist){
 //     localStorage.setItem('historial', JSON.stringify(plist));
