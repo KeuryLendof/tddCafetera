@@ -22,20 +22,21 @@ let login = document.getElementById("login"),
     historialAzucar = '',
     historialFecha = '';
 
-    historial = [];
+    //historial = [];
 
 
 
 function addHistorial(phistorialCafe, phistorialAzucar, phistorialFecha ){
 
-    let newHistorial ={
+    let newHistorial = JSON.parse(localStorage.getItem("historial"));
+    newHistorial.push({
         Cafe : phistorialCafe,
         Azucar : phistorialAzucar,
         Fecha : phistorialFecha
-    }
-    historial.push(newHistorial);
+    })
+    //historial.push(newHistorial);
     //localStorageHistorial(historial)
-    localStorage.setItem('historial', JSON.stringify(historial));
+    localStorage.setItem('historial', JSON.stringify(newHistorial));
 }
 
 login.addEventListener("click",()=>{
