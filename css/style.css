@@ -3,19 +3,19 @@
 
 .inventario .card{
     text-align: center;
-    height: 370px;
+    height: 320px;
 }
 .inventario .card img{
     margin: 0 auto;
     margin-top: 8px;
     margin-bottom: 8px;
-    width: 240px;
-    height: 240px;
+    width: 180px;
+    height: 180px;
 }
 .wrapper{
     margin: 0 auto;
-    height: 40px;
-    width: 90%;
+    height: 30px;
+    width: 65%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@
     user-select: none;
 }
 .wrapper span.num{
-    font-size: 25px;
+    font-size: 20px;
     border-right: 2px solid rgba(0,0,0,0.2);
     border-left: 2px solid rgba(0,0,0,0.2);
     pointer-events: none;
@@ -40,12 +40,17 @@
 
 
 .inicio{
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .pedidos{
     display: flex;
 }
+
+.formulario button{
+    margin: 3px;
+}
+
 
 .pedidos i{
     margin: 2px;
