@@ -5,6 +5,9 @@ let login = document.getElementById("login"),
     pedirCafeMediano = document.getElementById("pedirCafeMediano"),
     pedirCafeGrande = document.getElementById("pedirCafeGrande"),
 
+    unaAzucar = document.getElementById("pedirAzucar1"),
+    dosAzucar = document.getElementById("pedirAzucar2"),
+
     cafe = localStorage.getItem("cafe"),
     azucar = localStorage.getItem("azucar"),
     vasoPequeno = localStorage.getItem("vasoPequeno"),
@@ -73,5 +76,23 @@ pedirCafeGrande.addEventListener('click',()=>{
         }
     }else{
         swal ( "Oops" ,  "No hay cafe" ,  "error" )
+    }
+})
+
+unaAzucar.addEventListener('click',()=>{
+    if(azucar>0){
+        azucar -= 1
+        localStorage.setItem("azucar", azucar)
+    }else{
+        swal ( "Oops" ,  "No hay azucar" ,  "error" )
+    }
+})
+
+dosAzucar.addEventListener('click',()=>{
+    if(azucar>=2){
+        azucar -= 2
+        localStorage.setItem("azucar", azucar)
+    }else{
+        swal ( "Oops" ,  "No hay para dos cucharadas de azucar" ,  "error" )
     }
 })
