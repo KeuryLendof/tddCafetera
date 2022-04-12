@@ -222,34 +222,27 @@ cancelarOrden.addEventListener('click',()=>{
     if(historialCafe == '7 Oz'){
         vasoGrande += 1
         localStorage.setItem("vasoGrande", vasoGrande)
-    }else{
-        console.log("NULL")
     }
-
-    
-    if(historialAzucar = '1'){
+    if(historialAzucar == '1'){
         azucar += 1
         localStorage.setItem("azucar", azucar)
-    }else if(historialAzucar = '2'){
+    }
+    if(historialAzucar == '2'){
         azucar += 2
         localStorage.setItem("azucar", azucar)
-    }else if(historialAzucar = '3'){
+    }
+    if(historialAzucar == '3'){
         azucar += 3
         localStorage.setItem("azucar", azucar)
-    }else if(historialAzucar = '4'){
+    }
+    if(historialAzucar == '4'){
         azucar += 4
         localStorage.setItem("azucar", azucar)
-    }else if(historialAzucar = '5'){
+    }
+    if(historialAzucar == '5'){
         azucar += 5
         localStorage.setItem("azucar", azucar)
-    }else{
-        console.log("NULL")
     }
-
-    
-    
-    
-    
 })
 
 function mostrarBotonCancelar(){
