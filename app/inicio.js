@@ -207,10 +207,22 @@ orden.addEventListener("click",()=>{
 cancelarOrden.addEventListener('click',()=>{
     swal("Orden Cancelada!", "", "success");
     cancelarOrden.style.display = 'none';
-    cafe += 1
-    localStorage.setItem("cafe", cafe)
-    console.log(historialCafe)
-    console.log(historialAzucar)
+    if(cafe>0){
+        cafe += 1
+        localStorage.setItem("cafe", cafe)
+    }
+    if(historialCafe == '3 Oz'){
+        vasoPequeno += 1
+        localStorage.setItem("vasoPequeno", vasoPequeno)
+    }
+    if(historialCafe == '5 Oz'){
+        vasoMediano += 1
+        localStorage.setItem("vasoMediano", vasoMediano)
+    }
+    if(historialCafe == '7 Oz'){
+        vasoGrande += 1
+        localStorage.setItem("vasoGrande", vasoGrande)
+    }
 })
 
 function mostrarBotonCancelar(){
