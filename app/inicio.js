@@ -32,6 +32,32 @@ login.addEventListener("click",()=>{
 
 orden.addEventListener("click",()=>{
     swal("Orden exitosa!", "", "success")
+
+    let data =[
+        {
+            'Cantidad de cafe': '3 Oz',
+            'Azucar': '1',
+            'fecha': '11/11/11'
+        },
+        {
+            'Cantidad de cafe': '7 Oz',
+            'Azucar': '2',
+            'fecha': '12/12/12'
+        }
+    ]
+
+    localStorage.setItem('datos', JSON.stringify(data));
+
+    let prueba = JSON.parse(localStorage.getItem("datos"));
+    console.log(prueba[1])
+    console.log(prueba[0].estilo)
+    data.push({
+        'Cantidad de cafe': '5 Oz',
+        'Azucar': '1',
+        'fecha': '9/9/9'
+    })
+    localStorage.setItem('datos', JSON.stringify(data));
+    console.log(prueba)
 })
 
 pedirCafePequeno.addEventListener('click',()=>{
