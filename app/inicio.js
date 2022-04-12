@@ -12,10 +12,22 @@ let login = document.getElementById("login"),
     azucar = localStorage.getItem("azucar"),
     vasoPequeno = localStorage.getItem("vasoPequeno"),
     vasoMediano = localStorage.getItem("vasoMediano"),
-    vasoGrande = localStorage.getItem("vasoGrande");
+    vasoGrande = localStorage.getItem("vasoGrande"),
+
+    historial = [];
 
 
 
+function addHistorial(phistorialCafe, phistorialAzucar, phistorialFecha ){
+
+    let newHistorial ={
+        historialCafe : phistorialCafe,
+        historialAzucar : phistorialAzucar,
+        historialFecha : phistorialFecha
+    }
+    historial.push(newHistorial);
+    localStorage.setItem('historial', JSON.stringify(historial));
+}
 
 login.addEventListener("click",()=>{
     let usuario = document.querySelector("#usuario").value;
@@ -103,9 +115,13 @@ dosAzucar.addEventListener('click',()=>{
 
 orden.addEventListener("click",()=>{
     swal("Orden exitosa!", "", "success")
-    let historialCafe = '5 Oz';
-    let historialAzucar = '1';
-    let historialFecha = '11/04/22';
+    let historialCafe = '7 Oz',
+        historialAzucar = '2',
+        historialFecha = '11/04/22';
+    addHistorial(historialCafe, historialAzucar, historialFecha);
+    // let historialCafe = '5 Oz';
+    // let historialAzucar = '1';
+    // let historialFecha = '11/04/22';
 
     // let data =[
     //     {
@@ -122,14 +138,18 @@ orden.addEventListener("click",()=>{
 
     // localStorage.setItem('historial', JSON.stringify(data));
 
-    let prueba = JSON.parse(localStorage.getItem("datos"));
+    //let prueba = JSON.parse(localStorage.getItem("datos"));
     // console.log(prueba[1])
     // console.log(prueba[0].estilo)
-    prueba.push({
-        'Cantidad de cafe': historialCafe,
-        'Azucar': historialAzucar,
-        'fecha': historialFecha
-    })
-    localStorage.setItem('historial', JSON.stringify(prueba));
+    // prueba.push({
+    //     'Cantidad de cafe': historialCafe,
+    //     'Azucar': historialAzucar,
+    //     'fecha': historialFecha
+    // })
+    // localStorage.setItem('historial', JSON.stringify(prueba));
     //console.log(prueba)
 })
+
+// function localStorageHistorial(plist){
+//     localStorage.setItem('historial', JSON.stringify(plist));
+// }
