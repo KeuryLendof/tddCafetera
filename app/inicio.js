@@ -56,6 +56,7 @@ login.addEventListener("click",()=>{
 
 
 pedirCafePequeno.addEventListener('click',()=>{
+    mostrarBotonCancelar();
     historialCafe = '3 Oz'
     if(cafe>0){
         if(vasoPequeno>0){
@@ -155,7 +156,7 @@ cincoAzucar.addEventListener('click',()=>{
 
 // orden.addEventListener("click",()=>{
 
-//     swal("Orden exitosa!", "", "success")
+//     
 
 //     historialFecha = todayDate.toLocaleString();
 
@@ -195,3 +196,15 @@ cincoAzucar.addEventListener('click',()=>{
 // function localStorageHistorial(plist){
 //     localStorage.setItem('historial', JSON.stringify(plist));
 // }
+
+function mostrarBotonCancelar(){
+
+    var x = document.getElementById('cancelarOrden');
+    x.style.display = 'block';
+
+    // if (x.style.display === 'none') {
+    //     x.style.display = 'block';
+    // } else {
+    //     x.style.display = 'none';
+    // }
+}
