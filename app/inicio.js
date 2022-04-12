@@ -1,3 +1,4 @@
+const todayDate = new Date();
 let login = document.getElementById("login"),
     orden = document.getElementById("terminarOrden"),
 
@@ -16,7 +17,7 @@ let login = document.getElementById("login"),
 
     historialCafe = '',
     historialAzucar = '',
-    historialFecha = '11/04/22';
+    historialFecha = todayDate.toLocaleString();
 
     historial = [];
 
@@ -25,9 +26,9 @@ let login = document.getElementById("login"),
 function addHistorial(phistorialCafe, phistorialAzucar, phistorialFecha ){
 
     let newHistorial ={
-        historialCafe : phistorialCafe,
-        historialAzucar : phistorialAzucar,
-        historialFecha : phistorialFecha
+        Cafe : phistorialCafe,
+        Azucar : phistorialAzucar,
+        Fecha : phistorialFecha
     }
     historial.push(newHistorial);
     localStorage.setItem('historial', JSON.stringify(historial));
