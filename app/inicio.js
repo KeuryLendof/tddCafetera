@@ -32,7 +32,18 @@ orden.addEventListener("click",()=>{
 })
 
 pedirCafePequeno.addEventListener('click',()=>{
-
+    if(cafe>0){
+        if(vasoPequeno>0){
+            cafe -= 1
+            localStorage.setItem("cafe", cafe)
+            vasoPequeno -= 1
+            localStorage.setItem("vasoPequeno", vasoPequeno)
+        }else{
+            swal ( "Oops" ,  "No hay vasos de cafe pequenos!" ,  "error" )
+        }
+    }else{
+        swal ( "Oops" ,  "No hay cafe" ,  "error" )
+    }
 })
 
 pedirCafeMediano.addEventListener('click',()=>{
