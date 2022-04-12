@@ -8,6 +8,9 @@ let login = document.getElementById("login"),
 
     unaAzucar = document.getElementById("pedirAzucar1"),
     dosAzucar = document.getElementById("pedirAzucar2"),
+    tresAzucar = document.getElementById("pedirAzucar3"),
+    cuatroAzucar = document.getElementById("pedirAzucar4"),
+    cincoAzucar = document.getElementById("pedirAzucar5"),
 
     cafe = localStorage.getItem("cafe"),
     azucar = localStorage.getItem("azucar"),
@@ -17,7 +20,7 @@ let login = document.getElementById("login"),
 
     historialCafe = '',
     historialAzucar = '',
-    historialFecha = todayDate.toLocaleString();
+    historialFecha = '';
 
     historial = [];
 
@@ -31,8 +34,8 @@ function addHistorial(phistorialCafe, phistorialAzucar, phistorialFecha ){
         Fecha : phistorialFecha
     }
     historial.push(newHistorial);
-    localStorageHistorial(historial)
-    //localStorage.setItem('historial', JSON.stringify(historial));
+    //localStorageHistorial(historial)
+    localStorage.setItem('historial', JSON.stringify(historial));
 }
 
 login.addEventListener("click",()=>{
@@ -119,8 +122,41 @@ dosAzucar.addEventListener('click',()=>{
     }
 })
 
+tresAzucar.addEventListener('click',()=>{
+    historialAzucar = '3'
+    if(azucar>=3){
+        azucar -= 3
+        localStorage.setItem("azucar", azucar)
+    }else{
+        swal ( "Oops" ,  "Lo sentimos :( no hay para tres cucharadas de azucar" ,  "error" )
+    }
+})
+
+cuatroAzucar.addEventListener('click',()=>{
+    historialAzucar = '4'
+    if(azucar>=4){
+        azucar -= 4
+        localStorage.setItem("azucar", azucar)
+    }else{
+        swal ( "Oops" ,  "Lo sentimos :( no hay para cuatro cucharadas de azucar" ,  "error" )
+    }
+})
+
+cincoAzucar.addEventListener('click',()=>{
+    historialAzucar = '5'
+    if(azucar>=5){
+        azucar -= 5
+        localStorage.setItem("azucar", azucar)
+    }else{
+        swal ( "Oops" ,  "Lo sentimos :( no hay para cinco cucharadas de azucar" ,  "error" )
+    }
+})
+
 orden.addEventListener("click",()=>{
+
     swal("Orden exitosa!", "", "success")
+
+    historialFecha = todayDate.toLocaleString();
 
     addHistorial(historialCafe, historialAzucar, historialFecha);
 
@@ -130,14 +166,14 @@ orden.addEventListener("click",()=>{
 
     // let data =[
     //     {
-    //         'Cantidad de cafe': '3 Oz',
-    //         'Azucar': '1',
-    //         'fecha': '11/11/11'
+    //         'Cafe': '7 Oz',
+    //         'Azucar': '2',
+    //         'Fecha': '12/4/2022, 0:00:07'
     //     },
     //     {
-    //         'Cantidad de cafe': '7 Oz',
-    //         'Azucar': '2',
-    //         'fecha': '12/12/12'
+    //         "Cafe": "3 Oz",
+    //         "Azucar": "1",
+    //         "Fecha": "12/4/2022, 0:00:27"
     //     }
     // ]
 
@@ -155,6 +191,6 @@ orden.addEventListener("click",()=>{
     //console.log(prueba)
 })
 
-function localStorageHistorial(plist){
-    localStorage.setItem('historial', JSON.stringify(plist));
-}
+// function localStorageHistorial(plist){
+//     localStorage.setItem('historial', JSON.stringify(plist));
+// }
