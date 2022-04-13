@@ -1,9 +1,18 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Roboto');
 
 
+.inventario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+}
+
 .inventario .card{
     text-align: center;
-    height: 320px;
 }
 .inventario .card img{
     margin: 0 auto;
