@@ -117,6 +117,9 @@ function cerrarSesion(){
     window.location.href="./index.html";
 }
 
+function historialDeCompras(){
+    window.location.href="./historial.html";
+}
 
 // localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");
 
