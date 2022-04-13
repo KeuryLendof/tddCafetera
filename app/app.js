@@ -46,6 +46,7 @@ function cargar(){
 }
 
 aumentarCafeBtn.addEventListener("click",()=>{
+    cafe /=1
     cafe += 1
     cafeBtn.innerHTML = cafe
     localStorage.setItem("cafe", cafe)
@@ -58,6 +59,7 @@ disminuirCafeBtn.addEventListener("click",()=>{
 })
 
 aumentarAzucarBtn.addEventListener("click",()=>{
+    azucar /=1
     azucar += 1
     azucarBtn.innerHTML = azucar
     localStorage.setItem("azucar", azucar)
@@ -70,6 +72,7 @@ disminuirAzucarBtn.addEventListener("click",()=>{
 })
 
 aumentarVasoPBtn.addEventListener("click",()=>{
+    vasoPequeno /=1
     vasoPequeno += 1
     vasoPBtn.innerHTML = vasoPequeno
     localStorage.setItem("vasoPequeno", vasoPequeno)
@@ -82,6 +85,7 @@ disminuirVasoPBtn.addEventListener("click",()=>{
 })
 
 aumentarVasoMBtn.addEventListener("click",()=>{
+    vasoMediano /=1
     vasoMediano += 1
     vasoMBtn.innerHTML =  vasoMediano
     localStorage.setItem("vasoMediano",  vasoMediano)
@@ -94,6 +98,7 @@ disminuirVasoMBtn.addEventListener("click",()=>{
 })
 
 aumentarVasoGBtn.addEventListener("click",()=>{
+    vasoGrande /=1
     vasoGrande += 1
     vasoGBtn.innerHTML =  vasoGrande
     localStorage.setItem("vasoGrande",  vasoGrande)
