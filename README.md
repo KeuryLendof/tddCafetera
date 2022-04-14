@@ -8,3 +8,7 @@
 </ul>
 <p>2) Seleccionar las cucharadas de azúcar.</p>
 <p>3) Recoger vaso.</p>
+
+<h2>Test TDD</h2>
+
+![tdd](https://user-images.githubusercontent.com/84743111/163453913-ea35a8a3-8a54-49b2-b05d-a864ff0874c2.png)
