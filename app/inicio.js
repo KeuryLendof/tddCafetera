@@ -127,6 +127,10 @@ pedirCafeGrande.addEventListener('click',()=>{
 })
 
 unaAzucar.addEventListener('click',()=>{
+
+    unaAzucar.style.background = '#797780';
+    unaAzucar.style.color = '#fff';
+
     historialAzucar = '1'
     if(azucar>0){
         azucar -= 1
@@ -137,6 +141,10 @@ unaAzucar.addEventListener('click',()=>{
 })
 
 dosAzucar.addEventListener('click',()=>{
+
+    dosAzucar.style.background = '#797780';
+    dosAzucar.style.color = '#fff';
+
     historialAzucar = '2'
     if(azucar>=2){
         azucar -= 2
@@ -147,6 +155,10 @@ dosAzucar.addEventListener('click',()=>{
 })
 
 tresAzucar.addEventListener('click',()=>{
+
+    tresAzucar.style.background = '#797780';
+    tresAzucar.style.color = '#fff';
+
     historialAzucar = '3'
     if(azucar>=3){
         azucar -= 3
@@ -157,6 +169,10 @@ tresAzucar.addEventListener('click',()=>{
 })
 
 cuatroAzucar.addEventListener('click',()=>{
+
+    cuatroAzucar.style.background = '#797780';
+    cuatroAzucar.style.color = '#fff';
+
     historialAzucar = '4'
     if(azucar>=4){
         azucar -= 4
@@ -167,6 +183,10 @@ cuatroAzucar.addEventListener('click',()=>{
 })
 
 cincoAzucar.addEventListener('click',()=>{
+
+    cincoAzucar.style.background = '#797780';
+    cincoAzucar.style.color = '#fff';
+
     historialAzucar = '5'
     if(azucar>=5){
         azucar -= 5
@@ -270,6 +290,18 @@ cancelarOrden.addEventListener('click',()=>{
 
     pedirCafeGrande.style.background = '';
     pedirCafeGrande.style.color = '';
+
+
+    unaAzucar.style.background = '';
+    unaAzucar.style.color = '';
+    dosAzucar.style.background = '';
+    dosAzucar.style.color = '';
+    tresAzucar.style.background = '';
+    tresAzucar.style.color = '';
+    cuatroAzucar.style.background = '';
+    cuatroAzucar.style.color = '';
+    cincoAzucar.style.background = '';
+    cincoAzucar.style.color = '';
 })
 
 function mostrarBotonCancelar(){
