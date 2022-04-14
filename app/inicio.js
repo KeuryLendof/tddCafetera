@@ -69,14 +69,13 @@ pedirCafePequeno.addEventListener('click',()=>{
         pedirCafePequeno.style.background = '#c1804f';
         pedirCafePequeno.style.color = '#fff';
 
-        historialCafe = '3 Oz'
-
         if(cafe>0){
             if(vasoPequeno>0){
                 cafe -= 1
                 localStorage.setItem("cafe", cafe)
                 vasoPequeno -= 1
                 localStorage.setItem("vasoPequeno", vasoPequeno)
+                historialCafe = '3 Oz'
             }else{
                 swal ( "Oops" ,  "No hay vasos de cafe pequenos!" ,  "error" )
             }
@@ -100,14 +99,13 @@ pedirCafeMediano.addEventListener('click',()=>{
         pedirCafeMediano.style.background = '#c1804f';
         pedirCafeMediano.style.color = '#fff';
 
-        historialCafe = '5 Oz'
-
         if(cafe>0){
             if(vasoMediano>0){
                 cafe -= 1
                 localStorage.setItem("cafe", cafe)
                 vasoMediano -= 1
                 localStorage.setItem("vasoMediano", vasoMediano)
+                historialCafe = '5 Oz'
             }else{
                 swal ( "Oops" ,  "No hay vasos de cafe medianos!" ,  "error" )
             }
@@ -131,14 +129,13 @@ pedirCafeGrande.addEventListener('click',()=>{
         pedirCafeGrande.style.background = '#c1804f';
         pedirCafeGrande.style.color = '#fff';
 
-        historialCafe = '7 Oz'
-
         if(cafe>0){
             if(vasoGrande>0){
                 cafe -= 1
                 localStorage.setItem("cafe", cafe)
                 vasoGrande -= 1
                 localStorage.setItem("vasoGrande", vasoGrande)
+                historialCafe = '7 Oz'
             }else{
                 swal ( "Oops" ,  "No hay vasos de cafe grandes!" ,  "error" )
             }
@@ -160,10 +157,10 @@ unaAzucar.addEventListener('click',()=>{
         unaAzucar.style.background = '#797780';
         unaAzucar.style.color = '#fff';
 
-        historialAzucar = '1'
         if(azucar>0){
             azucar -= 1
             localStorage.setItem("azucar", azucar)
+            historialAzucar = '1'
         }else{
             swal ( "Oops" ,  "No hay azucar" ,  "error" )
         }
@@ -182,10 +179,10 @@ dosAzucar.addEventListener('click',()=>{
         dosAzucar.style.background = '#797780';
         dosAzucar.style.color = '#fff';
 
-        historialAzucar = '2'
         if(azucar>=2){
             azucar -= 2
             localStorage.setItem("azucar", azucar)
+            historialAzucar = '2'
         }else{
             swal ( "Oops" ,  "No hay para dos cucharadas de azucar" ,  "error" )
         }
@@ -204,10 +201,10 @@ tresAzucar.addEventListener('click',()=>{
         tresAzucar.style.background = '#797780';
         tresAzucar.style.color = '#fff';
 
-        historialAzucar = '3'
         if(azucar>=3){
             azucar -= 3
             localStorage.setItem("azucar", azucar)
+            historialAzucar = '3'
         }else{
             swal ( "Oops" ,  "Lo sentimos :( no hay para tres cucharadas de azucar" ,  "error" )
         }
@@ -226,10 +223,10 @@ cuatroAzucar.addEventListener('click',()=>{
         cuatroAzucar.style.background = '#797780';
         cuatroAzucar.style.color = '#fff';
 
-        historialAzucar = '4'
         if(azucar>=4){
             azucar -= 4
             localStorage.setItem("azucar", azucar)
+            historialAzucar = '4'
         }else{
             swal ( "Oops" ,  "Lo sentimos :( no hay para cuatro cucharadas de azucar" ,  "error" )
         }
@@ -248,10 +245,10 @@ cincoAzucar.addEventListener('click',()=>{
         cincoAzucar.style.background = '#797780';
         cincoAzucar.style.color = '#fff';
 
-        historialAzucar = '5'
         if(azucar>=5){
             azucar -= 5
             localStorage.setItem("azucar", azucar)
+            historialAzucar = '5'
         }else{
             swal ( "Oops" ,  "Lo sentimos :( no hay para cinco cucharadas de azucar" ,  "error" )
         }
@@ -270,6 +267,8 @@ orden.addEventListener("click",()=>{
     document.getElementById('cantidadAzucarM').innerHTML = historialAzucar;
 
     cancelarOrden.style.display = 'none';
+    historialCafe = '';
+    historialAzucar = '';
 
     // let historialCafe = '5 Oz';
     // let historialAzucar = '1';
