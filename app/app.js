@@ -29,6 +29,8 @@ let vasoPequeno = localStorage.getItem("vasoPequeno");
 let vasoMediano = localStorage.getItem("vasoMediano");
 let vasoGrande = localStorage.getItem("vasoGrande");
 
+let historial = [];
+
 function cargar(){
     // localStorage.setItem("vasoPequeno", 10);
     // localStorage.setItem("vasoMediano", 10);
@@ -119,6 +121,42 @@ function cerrarSesion(){
 
 function historialDeCompras(){
     window.location.href="./historial.html";
+}
+
+function getPersonList(){
+    let storeList = localStorage.getItem('historial');
+    if(storeList == null){
+        historial = []
+    }else{
+        historial = JSON.parse(storeList);
+    }
+    return historial;
+}
+
+function imprimirTabla(){
+   
+    let list = getPersonList(),
+        tbody = document.querySelector('#friendsTable tbody');
+
+    tbody.innerHTML = '';
+
+    for(let i = 0; i < list.length; i++){
+        let row = tbody.insertRow(i),
+            id = row.insertCell(0),
+            idCell = row.insertCell(1),
+            nombreCell = row.insertCell(2),
+            ciudadCell = row.insertCell(3);
+
+
+        id.innerHTML = i;
+        idCell.innerHTML = list[i].Cafe;
+        nombreCell.innerHTML = list[i].Azucar;
+        ciudadCell.innerHTML = list[i].Fecha;
+
+
+        tbody.appendChild(row);
+        
+    }
 }
 
 // localStorage.setItem("titulo", "Curso de Angular avanzado - Víctor Robles");

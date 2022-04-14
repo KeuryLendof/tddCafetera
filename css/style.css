@@ -9,8 +9,6 @@
     position: absolute;
     top: 20%;
     left: 5%;
-    font-size: 17px;
-    font-weight: 600;
 }
 
 .inventario .card{
@@ -33,6 +31,10 @@
     background: #FFF;
     border-radius: 12px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
 }
 .wrapper span{
     width: 70%;
@@ -47,6 +49,7 @@
     border-right: 2px solid rgba(0,0,0,0.2);
     border-left: 2px solid rgba(0,0,0,0.2);
     pointer-events: none;
+    cursor: none;
 }
 
 
@@ -110,4 +113,11 @@
 
 #cancelarOrden{
     display: none;
+}
+
+.tablaHistorial{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    text-align: center;
 }
