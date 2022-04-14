@@ -1,0 +1,22 @@
+{
+  "name": "tdd",
+  "version": "1.0.0",
+  "description": "<h1>Maquina De Café</h1>\r <h3>Maquina dispensadora de café utilizando T.D.D.</h3>\r <p>1) Seleccionar el tamaño de vaso de café.</p>\r <ul>\r   <li>Vaso pequeño -> 3 Oz de café</li>\r   <li>Vaso Mediano -> 5 Oz de café</li>\r   <li>Vaso Grande -> 7 Oz de café</li>\r </ul>\r <p>2) Seleccionar las cucharadas de azúcar.</p>\r <p>3) Recoger vaso.</p>",
+  "main": "inicio.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KeuryLendof/tddCafetera.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KeuryLendof/tddCafetera/issues"
+  },
+  "homepage": "https://github.com/KeuryLendof/tddCafetera#readme",
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
