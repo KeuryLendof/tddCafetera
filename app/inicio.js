@@ -59,71 +59,95 @@ login.addEventListener("click",()=>{
 
 pedirCafePequeno.addEventListener('click',()=>{
 
-    mostrarBotonCancelar();
+    if(historialCafe == '3 Oz' | historialCafe == '5 Oz' | historialCafe == '7 Oz'){
 
-    pedirCafePequeno.style.background = '#c1804f';
-    pedirCafePequeno.style.color = '#fff';
+        swal("Oops!", `Ya tienes en proceso un cafe de ${historialCafe}, si deseas cambian de opinion cancela la orden!`, "error");
 
-    historialCafe = '3 Oz'
-
-    if(cafe>0){
-        if(vasoPequeno>0){
-            cafe -= 1
-            localStorage.setItem("cafe", cafe)
-            vasoPequeno -= 1
-            localStorage.setItem("vasoPequeno", vasoPequeno)
-        }else{
-            swal ( "Oops" ,  "No hay vasos de cafe pequenos!" ,  "error" )
-        }
     }else{
-        swal ( "Oops" ,  "No hay cafe" ,  "error" )
+        mostrarBotonCancelar();
+
+        pedirCafePequeno.style.background = '#c1804f';
+        pedirCafePequeno.style.color = '#fff';
+
+        historialCafe = '3 Oz'
+
+        if(cafe>0){
+            if(vasoPequeno>0){
+                cafe -= 1
+                localStorage.setItem("cafe", cafe)
+                vasoPequeno -= 1
+                localStorage.setItem("vasoPequeno", vasoPequeno)
+            }else{
+                swal ( "Oops" ,  "No hay vasos de cafe pequenos!" ,  "error" )
+            }
+        }else{
+            swal ( "Oops" ,  "No hay cafe" ,  "error" )
+        }
     }
+
+    
 })
 
 pedirCafeMediano.addEventListener('click',()=>{
 
-    mostrarBotonCancelar();
+    if(historialCafe == '3 Oz' | historialCafe == '5 Oz' | historialCafe == '7 Oz'){
 
-    pedirCafeMediano.style.background = '#c1804f';
-    pedirCafeMediano.style.color = '#fff';
+        swal("Oops!", `Ya tienes en proceso un cafe de ${historialCafe}, si deseas cambian de opinion cancela la orden!`, "error");
 
-    historialCafe = '5 Oz'
-
-    if(cafe>0){
-        if(vasoMediano>0){
-            cafe -= 1
-            localStorage.setItem("cafe", cafe)
-            vasoMediano -= 1
-            localStorage.setItem("vasoMediano", vasoMediano)
-        }else{
-            swal ( "Oops" ,  "No hay vasos de cafe medianos!" ,  "error" )
-        }
     }else{
-        swal ( "Oops" ,  "No hay cafe" ,  "error" )
+        mostrarBotonCancelar();
+
+        pedirCafeMediano.style.background = '#c1804f';
+        pedirCafeMediano.style.color = '#fff';
+
+        historialCafe = '5 Oz'
+
+        if(cafe>0){
+            if(vasoMediano>0){
+                cafe -= 1
+                localStorage.setItem("cafe", cafe)
+                vasoMediano -= 1
+                localStorage.setItem("vasoMediano", vasoMediano)
+            }else{
+                swal ( "Oops" ,  "No hay vasos de cafe medianos!" ,  "error" )
+            }
+        }else{
+            swal ( "Oops" ,  "No hay cafe" ,  "error" )
+        }
     }
+
+    
 })
 
 pedirCafeGrande.addEventListener('click',()=>{
 
-    mostrarBotonCancelar();
+    if(historialCafe == '3 Oz' | historialCafe == '5 Oz' | historialCafe == '7 Oz'){
 
-    pedirCafeGrande.style.background = '#c1804f';
-    pedirCafeGrande.style.color = '#fff';
-
-    historialCafe = '7 Oz'
-
-    if(cafe>0){
-        if(vasoGrande>0){
-            cafe -= 1
-            localStorage.setItem("cafe", cafe)
-            vasoGrande -= 1
-            localStorage.setItem("vasoGrande", vasoGrande)
-        }else{
-            swal ( "Oops" ,  "No hay vasos de cafe grandes!" ,  "error" )
-        }
+        swal("Oops!", `Ya tienes en proceso un cafe de ${historialCafe}, si deseas cambian de opinion cancela la orden!`, "error");
+        
     }else{
-        swal ( "Oops" ,  "No hay cafe" ,  "error" )
+        mostrarBotonCancelar();
+
+        pedirCafeGrande.style.background = '#c1804f';
+        pedirCafeGrande.style.color = '#fff';
+
+        historialCafe = '7 Oz'
+
+        if(cafe>0){
+            if(vasoGrande>0){
+                cafe -= 1
+                localStorage.setItem("cafe", cafe)
+                vasoGrande -= 1
+                localStorage.setItem("vasoGrande", vasoGrande)
+            }else{
+                swal ( "Oops" ,  "No hay vasos de cafe grandes!" ,  "error" )
+            }
+        }else{
+            swal ( "Oops" ,  "No hay cafe" ,  "error" )
+        }
     }
+
+    
 })
 
 unaAzucar.addEventListener('click',()=>{
@@ -302,6 +326,8 @@ cancelarOrden.addEventListener('click',()=>{
     cuatroAzucar.style.color = '';
     cincoAzucar.style.background = '';
     cincoAzucar.style.color = '';
+
+    historialCafe = '';
 })
 
 function mostrarBotonCancelar(){
