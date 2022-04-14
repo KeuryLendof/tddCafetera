@@ -58,8 +58,14 @@ login.addEventListener("click",()=>{
 
 
 pedirCafePequeno.addEventListener('click',()=>{
+
     mostrarBotonCancelar();
+
+    pedirCafePequeno.style.background = '#c1804f';
+    pedirCafePequeno.style.color = '#fff';
+
     historialCafe = '3 Oz'
+
     if(cafe>0){
         if(vasoPequeno>0){
             cafe -= 1
@@ -75,8 +81,14 @@ pedirCafePequeno.addEventListener('click',()=>{
 })
 
 pedirCafeMediano.addEventListener('click',()=>{
+
     mostrarBotonCancelar();
+
+    pedirCafeMediano.style.background = '#c1804f';
+    pedirCafeMediano.style.color = '#fff';
+
     historialCafe = '5 Oz'
+
     if(cafe>0){
         if(vasoMediano>0){
             cafe -= 1
@@ -92,8 +104,14 @@ pedirCafeMediano.addEventListener('click',()=>{
 })
 
 pedirCafeGrande.addEventListener('click',()=>{
+
     mostrarBotonCancelar();
+
+    pedirCafeGrande.style.background = '#c1804f';
+    pedirCafeGrande.style.color = '#fff';
+
     historialCafe = '7 Oz'
+
     if(cafe>0){
         if(vasoGrande>0){
             cafe -= 1
@@ -243,6 +261,15 @@ cancelarOrden.addEventListener('click',()=>{
         azucar += 5
         localStorage.setItem("azucar", azucar)
     }
+
+    pedirCafePequeno.style.background = '';
+    pedirCafePequeno.style.color = '';
+
+    pedirCafeMediano.style.background = '';
+    pedirCafeMediano.style.color = '';
+
+    pedirCafeGrande.style.background = '';
+    pedirCafeGrande.style.color = '';
 })
 
 function mostrarBotonCancelar(){
