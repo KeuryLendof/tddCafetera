@@ -12,4 +12,24 @@ describe('Pedir cafe', ()=>{
         expect(resultado).toBe(2)
     });
 
+    it('Comprobar si hay azucar en el inventario',()=>{
+        const resultado = pedirCafe.comprobarSiHayAzucar(1);
+        expect(resultado).toBe(2)
+    });
+
+    it('Comprobar vasos de 3 Oz',()=>{
+        const resultado = pedirCafe.comprobarVazo3Oz(1);
+        expect(resultado).toBe(2)
+    });
+
+    it('Comprobar vasos de 5 Oz',()=>{
+        const resultado = pedirCafe.comprobarVazo5Oz(1);
+        expect(resultado).toBe(2)
+    });
+
+    it('Comprobar vasos de 7 Oz',()=>{
+        const resultado = pedirCafe.comprobarVazo7Oz(1);
+        expect(resultado).toBe(2)
+    });
+
 });
