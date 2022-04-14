@@ -152,72 +152,112 @@ pedirCafeGrande.addEventListener('click',()=>{
 
 unaAzucar.addEventListener('click',()=>{
 
-    unaAzucar.style.background = '#797780';
-    unaAzucar.style.color = '#fff';
+    if(historialAzucar == '1' | historialAzucar == '2' | historialAzucar == '3' | historialAzucar == '4' | historialAzucar == '5' ){
 
-    historialAzucar = '1'
-    if(azucar>0){
-        azucar -= 1
-        localStorage.setItem("azucar", azucar)
+        swal("Oops!", `Ya le hechaste ${historialAzucar} cucharadas de azucar a tu cafe, si deseas cambian de opinion cancela la orden!`, "error");
+
     }else{
-        swal ( "Oops" ,  "No hay azucar" ,  "error" )
+        unaAzucar.style.background = '#797780';
+        unaAzucar.style.color = '#fff';
+
+        historialAzucar = '1'
+        if(azucar>0){
+            azucar -= 1
+            localStorage.setItem("azucar", azucar)
+        }else{
+            swal ( "Oops" ,  "No hay azucar" ,  "error" )
+        }
     }
+
+    
 })
 
 dosAzucar.addEventListener('click',()=>{
 
-    dosAzucar.style.background = '#797780';
-    dosAzucar.style.color = '#fff';
+    if(historialAzucar == '1' | historialAzucar == '2' | historialAzucar == '3' | historialAzucar == '4' | historialAzucar == '5' ){
 
-    historialAzucar = '2'
-    if(azucar>=2){
-        azucar -= 2
-        localStorage.setItem("azucar", azucar)
+        swal("Oops!", `Ya le hechaste ${historialAzucar} cucharadas de azucar a tu cafe, si deseas cambian de opinion cancela la orden!`, "error");
+
     }else{
-        swal ( "Oops" ,  "No hay para dos cucharadas de azucar" ,  "error" )
+        dosAzucar.style.background = '#797780';
+        dosAzucar.style.color = '#fff';
+
+        historialAzucar = '2'
+        if(azucar>=2){
+            azucar -= 2
+            localStorage.setItem("azucar", azucar)
+        }else{
+            swal ( "Oops" ,  "No hay para dos cucharadas de azucar" ,  "error" )
+        }
     }
+
+    
 })
 
 tresAzucar.addEventListener('click',()=>{
 
-    tresAzucar.style.background = '#797780';
-    tresAzucar.style.color = '#fff';
+    if(historialAzucar == '1' | historialAzucar == '2' | historialAzucar == '3' | historialAzucar == '4' | historialAzucar == '5' ){
 
-    historialAzucar = '3'
-    if(azucar>=3){
-        azucar -= 3
-        localStorage.setItem("azucar", azucar)
+        swal("Oops!", `Ya le hechaste ${historialAzucar} cucharadas de azucar a tu cafe, si deseas cambian de opinion cancela la orden!`, "error");
+
     }else{
-        swal ( "Oops" ,  "Lo sentimos :( no hay para tres cucharadas de azucar" ,  "error" )
+        tresAzucar.style.background = '#797780';
+        tresAzucar.style.color = '#fff';
+
+        historialAzucar = '3'
+        if(azucar>=3){
+            azucar -= 3
+            localStorage.setItem("azucar", azucar)
+        }else{
+            swal ( "Oops" ,  "Lo sentimos :( no hay para tres cucharadas de azucar" ,  "error" )
+        }
     }
+
+    
 })
 
 cuatroAzucar.addEventListener('click',()=>{
 
-    cuatroAzucar.style.background = '#797780';
-    cuatroAzucar.style.color = '#fff';
+    if(historialAzucar == '1' | historialAzucar == '2' | historialAzucar == '3' | historialAzucar == '4' | historialAzucar == '5' ){
 
-    historialAzucar = '4'
-    if(azucar>=4){
-        azucar -= 4
-        localStorage.setItem("azucar", azucar)
+        swal("Oops!", `Ya le hechaste ${historialAzucar} cucharadas de azucar a tu cafe, si deseas cambian de opinion cancela la orden!`, "error");
+
     }else{
-        swal ( "Oops" ,  "Lo sentimos :( no hay para cuatro cucharadas de azucar" ,  "error" )
+        cuatroAzucar.style.background = '#797780';
+        cuatroAzucar.style.color = '#fff';
+
+        historialAzucar = '4'
+        if(azucar>=4){
+            azucar -= 4
+            localStorage.setItem("azucar", azucar)
+        }else{
+            swal ( "Oops" ,  "Lo sentimos :( no hay para cuatro cucharadas de azucar" ,  "error" )
+        }
     }
+
+    
 })
 
 cincoAzucar.addEventListener('click',()=>{
 
-    cincoAzucar.style.background = '#797780';
-    cincoAzucar.style.color = '#fff';
+    if(historialAzucar == '1' | historialAzucar == '2' | historialAzucar == '3' | historialAzucar == '4' | historialAzucar == '5' ){
 
-    historialAzucar = '5'
-    if(azucar>=5){
-        azucar -= 5
-        localStorage.setItem("azucar", azucar)
+        swal("Oops!", `Ya le hechaste ${historialAzucar} cucharadas de azucar a tu cafe, si deseas cambian de opinion cancela la orden!`, "error");
+
     }else{
-        swal ( "Oops" ,  "Lo sentimos :( no hay para cinco cucharadas de azucar" ,  "error" )
+        cincoAzucar.style.background = '#797780';
+        cincoAzucar.style.color = '#fff';
+
+        historialAzucar = '5'
+        if(azucar>=5){
+            azucar -= 5
+            localStorage.setItem("azucar", azucar)
+        }else{
+            swal ( "Oops" ,  "Lo sentimos :( no hay para cinco cucharadas de azucar" ,  "error" )
+        }
     }
+
+    
 })
 
 orden.addEventListener("click",()=>{
@@ -328,6 +368,7 @@ cancelarOrden.addEventListener('click',()=>{
     cincoAzucar.style.color = '';
 
     historialCafe = '';
+    historialAzucar = '';
 })
 
 function mostrarBotonCancelar(){
