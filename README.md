@@ -20,8 +20,10 @@
 
 
 <h2>Test TDD</h2>
-<h5>npm install</h5>
-<h5>npm test</h5>
+
+### `npm install`
+
+### `npm test`
 
 
 ![tdd](https://user-images.githubusercontent.com/84743111/163453913-ea35a8a3-8a54-49b2-b05d-a864ff0874c2.png)
