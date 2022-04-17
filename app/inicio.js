@@ -20,8 +20,6 @@ let login = document.getElementById("login"),
     vasoMediano = localStorage.getItem("vasoMediano"),
     vasoGrande = localStorage.getItem("vasoGrande"),
 
-    data = 1,
-
     historialCafe = '',
     historialAzucar = '',
     historialFecha = '';
@@ -403,16 +401,3 @@ function mostrarBotonCancelar(){
     //     x.style.display = 'none';
     // }
 }
-
-class Storage{
-
-    comprobarDatos(f){
-        if(data>0){
-            return f=1;
-        }else{
-            return f=0
-        }
-    }
-}
-
-module.exports = Storage;

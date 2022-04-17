@@ -1,57 +1,70 @@
+const Data = require('./storage');
+ 
 class PedirCafe{
+
     
     comprobarSiHayCafe(comprobar){
 
-        let cafe = 33;
+        const data = new Data;
+        const verificar = data.verificarCafe(1)
+ 
         
-        if(cafe>0){
-            return comprobar = 2;
+        if(verificar>0){
+            return comprobar = true;
         }else{
-            return comprobar = 1;
+            return comprobar = false;
         }
     }
 
     comprobarSiHayAzucar(comprobar){
 
-        let azucar = 33;
+        const data = new Data;
+        const verificar = data.verificarAzucar(1)
+ 
         
-        if(azucar>0){
-            return comprobar = 2;
+        if(verificar>0){
+            return comprobar = true;
         }else{
-            return comprobar = 1;
+            return comprobar = false;
         }
     }
 
     comprobarVazo3Oz(comprobar){
 
-        let vaso3 = 33;
+        const data = new Data;
+        const verificar = data.verificarVasos(1)
+ 
         
-        if(vaso3>0){
-            return comprobar = 2;
+        if(verificar>0){
+            return comprobar = true;
         }else{
-            return comprobar = 1;
+            return comprobar = false;
         }
     }
 
     comprobarVazo5Oz(comprobar){
 
-        let vaso5 = 33;
+        const data = new Data;
+        const verificar = data.verificarVasos(1)
+ 
         
-        if(vaso5>0){
-            return comprobar = 2;
+        if(verificar>0){
+            return comprobar = true;
         }else{
-            return comprobar = 1;
+            return comprobar = false;
         }
     }
 
     comprobarVazo7Oz(comprobar){
 
-        let vaso7 = 33;
+        const data = new Data;
+        const verificar = data.verificarVasos(1)
+ 
         
-        if(vaso7>0){
-            return comprobar = 2;
+        if(verificar>0){
+            return comprobar = true;
         }else{
-            return comprobar = 1;
+            return comprobar = false;
         }
     }
 }
