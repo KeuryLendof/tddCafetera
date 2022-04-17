@@ -20,6 +20,8 @@ let login = document.getElementById("login"),
     vasoMediano = localStorage.getItem("vasoMediano"),
     vasoGrande = localStorage.getItem("vasoGrande"),
 
+    data = 1,
+
     historialCafe = '',
     historialAzucar = '',
     historialFecha = '';
@@ -270,6 +272,27 @@ orden.addEventListener("click",()=>{
     historialCafe = '';
     historialAzucar = '';
 
+    pedirCafePequeno.style.background = '';
+    pedirCafePequeno.style.color = '';
+
+    pedirCafeMediano.style.background = '';
+    pedirCafeMediano.style.color = '';
+
+    pedirCafeGrande.style.background = '';
+    pedirCafeGrande.style.color = '';
+
+
+    unaAzucar.style.background = '';
+    unaAzucar.style.color = '';
+    dosAzucar.style.background = '';
+    dosAzucar.style.color = '';
+    tresAzucar.style.background = '';
+    tresAzucar.style.color = '';
+    cuatroAzucar.style.background = '';
+    cuatroAzucar.style.color = '';
+    cincoAzucar.style.background = '';
+    cincoAzucar.style.color = '';
+
     // let historialCafe = '5 Oz';
     // let historialAzucar = '1';
     // let historialFecha = '11/04/22';
@@ -380,3 +403,16 @@ function mostrarBotonCancelar(){
     //     x.style.display = 'none';
     // }
 }
+
+class Storage{
+
+    comprobarDatos(f){
+        if(data>0){
+            return f=1;
+        }else{
+            return f=0
+        }
+    }
+}
+
+module.exports = Storage;
